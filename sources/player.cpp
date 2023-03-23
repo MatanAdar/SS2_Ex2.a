@@ -2,12 +2,17 @@
 
 #include <string>
 
+#include <iostream>
+using namespace std;
+using namespace ariel;
 
-Player::Player(std::string name){
+
+
+Player::Player(string name){
     myName=name;
 }
 
-std::string Player::getString(){
+string Player::getName(){
     return myName;
 }
 

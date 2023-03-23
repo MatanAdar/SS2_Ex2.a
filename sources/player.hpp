@@ -5,9 +5,7 @@
 #include <stdio.h>
 
 namespace ariel{}
-using namespace ariel;
 
-using namespace std;
 
 
 class Player{
@@ -22,7 +20,7 @@ class Player{
 
         Player(std::string name);
 
-        std::string getString();
+        std::string getName();
 
         int stacksize();
 
