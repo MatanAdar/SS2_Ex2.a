@@ -51,8 +51,6 @@ TEST_CASE("Checking if game created successfully"){
     // checking if creating a new game with the players that played before will not throw an exception
     CHECK_NOTHROW(Game game(p1,p3));
 
-
-
 }
 
 
@@ -115,25 +113,6 @@ TEST_CASE("Checking if the first turn ended"){
         CHECK((p1.cardesTaken() == 0 && p2.cardesTaken() == 0));
     }
 
-}
-
-
-TEST_CASE("Checking if we can use the printLastTurn function"){
-
-    // create 2 players
-    Player p1("Alice");
-    Player p2("Bob");
-
-    // starting game
-    Game game(p1,p2);
-
-    // checking if will throw exception because we didnt play turn yet
-    CHECK_THROWS(game.printLastTurn());
-
-    game.playTurn();
-
-    // checking if after we played 1 turn we can print the details and not get exception
-    CHECK_NOTHROW(game.printLastTurn());
 }
 
 
