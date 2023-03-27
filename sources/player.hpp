@@ -4,23 +4,24 @@
 #include <string>
 #include <stdio.h>
 
-namespace ariel{}
+using namespace std;
 
+namespace ariel{}
 
 
 class Player{
 
     private:
-        std::string myName;
+        string myName;
 
     
     public:
 
         Player(){}
 
-        Player(std::string name);
+        Player(string name);
 
-        std::string getName();
+        string getName();
 
         int stacksize();
 

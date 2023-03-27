@@ -64,12 +64,20 @@ TEST_CASE("Checking if function created successfully in game class"){
     Game game(p1,p2);
 
     // checking if all functions not throwing exceptions
-    CHECK_NOTHROW(game.playAll());
     CHECK_NOTHROW(game.playTurn());
+
+    game.playTurn();
+
     CHECK_NOTHROW(game.printLastTurn());
+
+    CHECK_NOTHROW(game.playAll());
+
+    game.playAll();
+
+    CHECK_NOTHROW(game.printWiner());
     CHECK_NOTHROW(game.printLog());
     CHECK_NOTHROW(game.printStats());
-    CHECK_NOTHROW(game.printWiner());
+
 }
 
 
@@ -105,7 +113,7 @@ TEST_CASE("Checking if the first turn ended"){
 
     //checking if we still have cards in our hands:
     //if we have, we check if we got cards from the another player(thats mean that someone won)
-    //if we dont have cards in our hand , its mean that we had equal cards everytime and then we check if we realy didnt got any card from the another player
+    //if we dont have cards in our hand , its mean that we had equal cards everytime and then we check if we didnt got any card from the another player 
     if(p1.stacksize()!=0 && p2.stacksize()!=0){
         CHECK((p1.cardesTaken()>0 || p2.cardesTaken()>0));
     }
@@ -116,7 +124,7 @@ TEST_CASE("Checking if the first turn ended"){
 }
 
 
-TEST_CASE("Checking if after 5 turns the 2 players together have still 52 cards"){
+TEST_CASE("Checking if after 5 turns each player have at most 21 cards and together have still 52 cards"){
 
     // create 2 players
     Player p1("Alice");
