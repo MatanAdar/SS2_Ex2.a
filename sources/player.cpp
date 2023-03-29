@@ -9,11 +9,11 @@ using namespace ariel;
 
 
 Player::Player(string name){
-    myName=name;
+    this->myName=name;
 }
 
 string Player::getName(){
-    return myName;
+    return this->myName;
 }
 
 int Player::stacksize(){
