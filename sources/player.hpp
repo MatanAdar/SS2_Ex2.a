@@ -6,8 +6,7 @@
 
 using namespace std;
 
-namespace ariel{}
-
+namespace ariel{
 
 class Player{
 
@@ -28,5 +27,6 @@ class Player{
         int cardesTaken();   
 
 };
+}
 
 #endif

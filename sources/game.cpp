@@ -1,6 +1,8 @@
 #include "game.hpp"
 #include "player.hpp"
 
+using namespace ariel;
+
 
 Game::Game(Player p1,Player p2){
     this->player1 = p1;

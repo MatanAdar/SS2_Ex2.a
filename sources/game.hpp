@@ -4,6 +4,7 @@
 #include "player.hpp"
 #include "iostream"
 
+namespace ariel{
 class Game{
 
     private:
@@ -29,6 +30,7 @@ class Game{
         void printLastTurn();
 
 };
+}
 
 
 #endif
