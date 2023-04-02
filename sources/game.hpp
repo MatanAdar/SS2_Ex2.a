@@ -3,6 +3,7 @@
 
 #include "player.hpp"
 #include "iostream"
+#include "card.hpp"
 
 namespace ariel{
 class Game{
@@ -10,12 +11,17 @@ class Game{
     private:
         Player player1;
         Player player2;
+        vector<Card> deck_of_cards;
 
     public:
 
         Game(){}
 
         Game(Player player1,Player player2);
+
+        // void create_deck();
+
+        // vector<Card> getDeck();
 
         void playAll();
 
@@ -28,6 +34,10 @@ class Game{
         void playTurn();
 
         void printLastTurn();
+
+
+
+
 
 };
 }
